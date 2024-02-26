@@ -49,7 +49,7 @@ def score_calc():
     else:
         print('F')
 
-score_calc()
+# score_calc()
 
 # 4.6 Write a program to prompt the user for hours and rate per hour using input to compute gross pay. 
 # Pay should be the normal rate for hours up to 40 and time-and-a-half for the hourly rate for all hours worked above 40 hours.
@@ -68,9 +68,36 @@ def computepay(h, r):
         gross = (40 * r) + (ot * ot_rate)
     return gross
 
-h = input("Enter your hours: ")
-rate = input("Enter your hourly Rate: ")
-hflo = float(h)
-h_rate = float(rate)
+# h = input("Enter your hours: ")
+# rate = input("Enter your hourly Rate: ")
+# hflo = float(h)
+# h_rate = float(rate)
 #Baseline Hours 40
-print("Pay", computepay(hflo, h_rate))
+# print("Pay", computepay(hflo, h_rate))
+
+# 5.2 Write a program that repeatedly prompts a user for integer numbers until the user enters 'done'. 
+# Once 'done' is entered, print out the largest and smallest of the numbers. 
+# If the user enters anything other than a valid number catch it with a try/except 
+# and put out an appropriate message and ignore the number.
+# Enter 7, 2, bob, 10, and 4 and match the output below.
+
+def prompt_one():
+    min_num = None
+    max_num = 0
+    while True:
+        user_i = input('Enter a number: ')
+        if user_i == 'done':
+            break
+        try:
+            num_x = int(user_i)
+        except:
+            print('Invalid Input')
+            continue
+        if min_num == None:
+            min_num = num_x
+        min_num = min(min_num, num_x)
+        max_num = max(max_num, num_x)
+    print('Maximum is ', max_num)
+    print('Minimum is ', min_num)
+        
+prompt_one()
