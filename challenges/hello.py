@@ -68,12 +68,12 @@ def computepay(h, r):
         gross = (40 * r) + (ot * ot_rate)
     return gross
 
-# h = input("Enter your hours: ")
-# rate = input("Enter your hourly Rate: ")
-# hflo = float(h)
-# h_rate = float(rate)
-#Baseline Hours 40
-# print("Pay", computepay(hflo, h_rate))
+h = input("Enter your hours: ")
+rate = input("Enter your hourly Rate: ")
+hflo = float(h)
+h_rate = float(rate)
+# Baseline Hours 40
+print("Pay", computepay(hflo, h_rate))
 
 # 5.2 Write a program that repeatedly prompts a user for integer numbers until the user enters 'done'. 
 # Once 'done' is entered, print out the largest and smallest of the numbers. 
